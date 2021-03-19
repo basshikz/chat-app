@@ -9,9 +9,9 @@
 
   </div>
   <div class="rooms">
-    <% @rooms.each do |room| %>
+    <% current_user.rooms.each do |room| %>
     <div class="room-name">
-    <p><%=room.name %></p>
+      <%= link_to room.name ,room_messages_path(room)%>
     </div>
     <% end %>
   </div>
